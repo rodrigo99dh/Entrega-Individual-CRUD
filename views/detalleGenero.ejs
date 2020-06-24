@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> Detalle del Genero</h1>
+        <h1><%= genres.name %></h1>
+        <ul>
+            <h2>Peliculas del genero :</h2>
+            <% for (let i = 0; i < genres.movies.length; i++) { %>
+                <li>
+         <%= genres.movies[i].title %> </a> 
+                </li>
+                <% } %>
+            </ul>
+    
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method = "POST" action = '/movies/create/'>
+        <% if (typeof errors != 'undefined') {%>
+            <ul>
+                <% for(let i=0; i< errors.length; i++){ %>
+                    <li>
+                        <%=errors[i].msg%>
+                    </li>
+               <% } %>
+            </ul>
+            <% } %>
+        <label ><h3>Titulo</h3></label>
+        <input type='text' name='title'>
+        <label ><h3>Rating</h3></label>
+        <input type='text' name='rating'>
+        <label ><h3>Awards</h3></label>
+        <input type='text' name='awards'>
+        <label ><h3>Length</h3></label>
+        <input type='text' name='length'>
+        <label ><h3>Release Date</h3></label>
+        <input type='date' name='release_date'>
+
+
+       
+        <button type='submit'><h5>Crear</h5></button>
+    </form>
+</body>
+</html>

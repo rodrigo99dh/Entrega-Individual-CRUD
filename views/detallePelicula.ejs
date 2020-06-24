@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DETALLE PELICULA</h1>
+    <h2><%= movies.title + " " + movies.rating%></h2>
+    <a href='/movies/genre_detail/<%=movies.genres.id%>'><h2><%= 'Genero: ' + movies.genres.name   %></h2></a>
+    <ul>
+        <h2>Actor/es:</h2>
+        <% for (let i = 0; i < movies.actors.length; i++) { %>
+            <li>
+     <a href ='/movies/actor_detail/<%=movies.actors[i].id%>'><%= movies.actors[i].first_name + " " + movies.actors[i].last_name%> </a> 
+            </li>
+            <% } %>
+        </ul>
+
+    
+    
+    <br>
+    <form action ='/movies/delete/<%=movies.id%>' method='POST'>
+        <button type='submit'>Borrar</button>
+    </form>
+</body>
+</html>
