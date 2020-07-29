@@ -1,0 +1,17 @@
+li{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+
+}
+a{
+    text-decoration: underline black;
+    color: black;
+   
+}
+li{
+    margin-top:5px;
+}
+._movies{
+    list-style: none !important;
+}

@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/peliculas.css' />
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Listado De Peliculas</h1>
+    <button><a class="a_movies"href="/movies/create">CREAR PELICULA</a></button>
+
     <ul>
         <% for (let i = 0; i < movies.length; i++){ %>  
         <li>
 
-        <%= movies[i].title %>
+       <a href="/movies/detail/<%=movies[i].id%>"> <%= movies[i].title %></a>
                 </li>
            <% } %>
         
